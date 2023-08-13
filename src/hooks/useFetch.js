@@ -5,7 +5,7 @@ export const useFecth = (url) => {
     const [loading, setLoading] = useState(true)
     const [errors, setErrors] = useState(null)
 
-    const fetchData = useCallback(async () => {
+    const getData = useCallback(async () => {
         setLoading(true)
 
         try {
@@ -27,8 +27,8 @@ export const useFecth = (url) => {
     }, [])
 
     useEffect(() => {
-        fetchData()
-    }, [])
+        getData()
+    }, [getData])
 
     return { data, loading, errors }
 }
